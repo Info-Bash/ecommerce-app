@@ -1,5 +1,6 @@
 import axios from "axios";
 import { api } from "../../lib/api";
+import { getImageUrl } from "../../lib/image";
 import dayjs from "dayjs";
 import { Link } from "react-router";
 import { Fragment } from "react";
@@ -28,7 +29,7 @@ export function OrderDetailsGrid({ order, loadCart }) {
         return (
           <Fragment key={productId}>
             <div className="product-image-container">
-              <img src={orderProduct.product.image} />
+              <img src={getImageUrl(orderProduct.product.image)} />
             </div>
 
             <div className="product-details">

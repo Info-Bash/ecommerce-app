@@ -1,5 +1,6 @@
 import axios from "axios";
 import { api } from "../lib/api";
+import { getImageUrl } from "../lib/image";
 import dayjs from "dayjs";
 import { Link, useParams } from "react-router";
 import { Header } from "../components/Header";
@@ -71,7 +72,7 @@ export function TrackingPage({ cart }) {
             {`Quantity: ${orderProduct.quantity}`}
           </div>
 
-          <img className="product-image" src={`${orderProduct.product.image}`} />
+          <img className="product-image" src={getImageUrl(orderProduct.product.image)} />
 
           <div className="progress-labels-container">
             <div className={`progress-label ${isPreparing && 'current-status'}`}>

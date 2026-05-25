@@ -1,5 +1,6 @@
 import axios from "axios";
 import { api } from "../../lib/api";
+import { getImageUrl } from "../../lib/image";
 import { useState } from "react";
 import { formatMoney } from "../../utils/money";
 import CheckMarkIcon from '../../assets/images/icons/checkmark.png';
@@ -39,7 +40,7 @@ export function Product({ product, loadCart }) {
       <div className="product-image-container">
         <img className="product-image"
           data-testid="product-image"
-          src={product.image} />
+          src={getImageUrl(product.image)} />
       </div>
 
       <div className="product-name limit-text-to-2-lines">
