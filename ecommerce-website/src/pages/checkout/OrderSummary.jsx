@@ -2,6 +2,7 @@ import { DeliveryDate } from "./DeliveryDate";
 import { DeliveryOption } from "./DeliveryOptions";
 import { CartItemDetails } from "./CartItemDetails";
 import axios from "axios";
+import { api } from "../../lib/api";
 
 
 export function OrderSummary({ cart, deliveryOptions, loadCart }) {
@@ -14,7 +15,7 @@ export function OrderSummary({ cart, deliveryOptions, loadCart }) {
         })
 
         const deleteCartItem = async () => {
-          await axios.delete(`/api/cart-items/${cartItem.productId}`)
+          await axios.delete(api(`/api/cart-items/${cartItem.productId}`));
           await loadCart();
         }
 

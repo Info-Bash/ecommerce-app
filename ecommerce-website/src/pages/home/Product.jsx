@@ -1,4 +1,5 @@
 import axios from "axios";
+import { api } from "../../lib/api";
 import { useState } from "react";
 import { formatMoney } from "../../utils/money";
 import CheckMarkIcon from '../../assets/images/icons/checkmark.png';
@@ -17,7 +18,7 @@ export function Product({ product, loadCart }) {
 
   const addToCart = async () => {
 
-    await axios.post('/api/cart-items', {
+    await axios.post(api('/api/cart-items'), {
       productId: product.id,
       quantity: quantity
     });

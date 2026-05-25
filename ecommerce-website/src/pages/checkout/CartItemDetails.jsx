@@ -1,5 +1,5 @@
-
 import axios from "axios";
+import { api } from "../../lib/api";
 import { useState } from "react";
 import { formatMoney } from "../../utils/money";
 
@@ -28,7 +28,7 @@ export function CartItemDetails({ cartItem, deleteCartItem, loadCart }) {
     /*     setCartQuantityUpdate(cartQuantityUpdate ? false : true);
      */
     if (cartQuantityUpdate) {
-      await axios.put(`/api/cart-items/${cartItem.productId}`, {
+      await axios.put(api(`/api/cart-items/${cartItem.productId}`), {
         quantity: Number(quantity)
       });
       await loadCart();

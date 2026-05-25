@@ -1,4 +1,5 @@
 import axios from "axios";
+import { api } from "../../lib/api";
 import { useNavigate } from "react-router";
 import { formatMoney } from "../../utils/money";
 
@@ -8,7 +9,7 @@ export function PaymentSummary({ paymentSummary, loadCart }) {
 
 
   const createOrder = async () => {
-    await axios.post('/api/orders');
+    await axios.post(api('/api/orders'));
     await loadCart();
 
     navigate('/orders');
