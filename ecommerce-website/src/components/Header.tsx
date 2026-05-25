@@ -1,10 +1,10 @@
+import { useState, useEffect, useRef } from 'react';
 import { NavLink, useNavigate, useSearchParams, useLocation } from 'react-router';
 import CartIcon from '../assets/images/icons/cart-icon.png';
 import LogoWhite from '../assets/images/logo-white.png';
 import MobileLogoWhite from '../assets/images/mobile-logo-white.png';
 import SearchIcon from '../assets/images/icons/search-icon.png';
-import './header.css';
-import { useState, useEffect, useRef } from 'react';
+import './Header.css';
 
 type HeaderProp = {
   cart: {
