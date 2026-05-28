@@ -16,17 +16,16 @@ The project allows users to browse products, search and filter products, place o
 
 ## Pages
 
-* **Home Page** – Displays all available products
-* **Checkout Page** – Handles cart and order checkout process
-* **Order Page** – Displays user order information
-* **Tracking Page** – Tracks order delivery status
+* **Home Page** - Displays all available products
+* **Checkout Page** - Handles cart and order checkout process
+* **Order Page** - Displays user order information
+* **Tracking Page** - Tracks order delivery status
 
 ## Tech Stack
 
 ### Frontend
 
 * React 19
-* TypeScript
 * Vite
 * React Router
 * Axios
@@ -49,7 +48,7 @@ The project allows users to browse products, search and filter products, place o
 Clone the repository:
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Info-Bash/ecommerce-app.git
 ```
 
 Navigate into the project folder:
@@ -100,10 +99,12 @@ npx vitest
 src/
 │── assets/
 │── components/
+│── lib/
 │── pages/
 │── utils/
 │── App.tsx
 │── main.tsx
+
 ```
 
 ## Future Improvements

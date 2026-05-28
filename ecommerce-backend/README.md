@@ -30,7 +30,7 @@ It provides REST APIs for products, cart management, orders, delivery options, a
 * Express.js
 * Sequelize (ORM)
 * CORS
-* SQLite / SQL database (depending on your config)
+* SQLite database
 * ES Modules
 
 ---
